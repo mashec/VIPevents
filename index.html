@@ -1,72 +1,114 @@
-export default function PriveDiningPage() { return ( <div className="bg-neutral-50 text-neutral-800 font-sans"> {/* HERO SECTION */} <section className="relative h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1606787366850-de6330128bfc')] bg-cover bg-center"> <div className="absolute inset-0 bg-black/50" /> <div className="relative z-10 text-center text-white px-4"> <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-4">Privé Dining</h1> <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto"> Fine dining experience — served in the intimacy of your home or office. </p> <button className="mt-8 bg-white text-black px-6 py-3 rounded-2xl shadow-lg hover:bg-neutral-200 transition"> Zarezerwuj kolację </button> </div> </section>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privé Dining</title>
+    <!-- Tailwind CSS CDN -->
+    <!-- Używamy skryptu Tailwind JIT (Just-In-Time) aby dynamicznie generować CSS z klas w HTML/JSX -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel CDN do transpilacji JSX (składni React) na zwykły JavaScript -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- Element, do którego zostanie zamontowana aplikacja React -->
+    <div id="root"></div>
 
-{/* ABOUT SECTION */}
-  <section className="py-20 px-6 md:px-20 bg-white">
-    <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl font-light mb-6">Nasza filozofia</h2>
-      <p className="text-lg leading-relaxed text-neutral-600">
-        W Privé Dining wierzymy, że elegancja smaku rodzi się z dbałości o każdy detal. 
-        Tworzymy doświadczenia kulinarne, które łączą fine dining z domowym komfortem. 
-        Używamy tylko wyselekcjonowanych składników, współpracując z lokalnymi dostawcami, 
-        aby zapewnić świeżość, jakość i wyjątkowy smak.
-      </p>
-    </div>
-  </section>
+    <script type="text/babel">
+        // Twój komponent React
+        function PriveDiningPage() {
+            return (
+                <div className="bg-neutral-50 text-neutral-800 font-sans">
+                    {/* HERO SECTION */}
+                    <section className="relative h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1606787366850-de6330128bfc')] bg-cover bg-center">
+                        <div className="absolute inset-0 bg-black/50" />
+                        <div className="relative z-10 text-center text-white px-4">
+                            <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-4">Privé Dining</h1>
+                            <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto">
+                                Fine dining experience — served in the intimacy of your home or office.
+                            </p>
+                            <button className="mt-8 bg-white text-black px-6 py-3 rounded-2xl shadow-lg hover:bg-neutral-200 transition">
+                                Zarezerwuj kolację
+                            </button>
+                        </div>
+                    </section>
 
-  {/* OFFER SECTION */}
-  <section className="py-20 px-6 md:px-20 bg-neutral-100">
-    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-      <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
-        <h3 className="text-2xl font-light mb-4">Kolacje degustacyjne</h3>
-        <p className="text-neutral-600">Wieloetapowe menu tworzone indywidualnie, z dopasowanymi winami i perfekcyjnym serwisem.</p>
-      </div>
-      <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
-        <h3 className="text-2xl font-light mb-4">Eleganckie obiady</h3>
-        <p className="text-neutral-600">Wyjątkowe posiłki dla gości specjalnych lub zespołu — serwowane jak w renomowanej restauracji.</p>
-      </div>
-      <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
-        <h3 className="text-2xl font-light mb-4">Kolacje firmowe</h3>
-        <p className="text-neutral-600">Ekskluzywny serwis w przestrzeni Twojej firmy – idealny na spotkania z partnerami biznesowymi.</p>
-      </div>
-    </div>
-  </section>
+                    {/* ABOUT SECTION */}
+                    <section className="py-20 px-6 md:px-20 bg-white">
+                        <div className="max-w-5xl mx-auto text-center">
+                            <h2 className="text-3xl font-light mb-6">Nasza filozofia</h2>
+                            <p className="text-lg leading-relaxed text-neutral-600">
+                                W Privé Dining wierzymy, że elegancja smaku rodzi się z dbałości o każdy detal.
+                                Tworzymy doświadczenia kulinarne, które łączą fine dining z domowym komfortem.
+                                Używamy tylko wyselekcjonowanych składników, współpracując z lokalnymi dostawcami,
+                                aby zapewnić świeżość, jakość i wyjątkowy smak.
+                            </p>
+                        </div>
+                    </section>
 
-  
-  {/* EXPERIENCE SECTION */}
-      <section className="py-20 px-6 md:px-20 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-light mb-6">Atmosfera Privé</h2>
-          <p className="text-lg text-neutral-600 mb-10">
-            Domowy spokój. Restauracyjna perfekcja. Dyskretna obsługa i doświadczenie, które zostaje w pamięci.
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1524230568007-1b2b9f1c8f8f"
-            alt="Fine dining table"
-            className="rounded-2xl shadow-lg mx-auto max-h-[500px] object-cover"
-          />
-        </div>
-      </section>
+                    {/* OFFER SECTION */}
+                    <section className="py-20 px-6 md:px-20 bg-neutral-100">
+                        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+                            <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
+                                <h3 className="text-2xl font-light mb-4">Kolacje degustacyjne</h3>
+                                <p className="text-neutral-600">Wieloetapowe menu tworzone indywidualnie, z dopasowanymi winami i perfekcyjnym serwisem.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
+                                <h3 className="text-2xl font-light mb-4">Eleganckie obiady</h3>
+                                <p className="text-neutral-600">Wyjątkowe posiłki dla gości specjalnych lub zespołu — serwowane jak w renomowanej restauracji.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
+                                <h3 className="text-2xl font-light mb-4">Kolacje firmowe</h3>
+                                <p className="text-neutral-600">Ekskluzywny serwis w przestrzeni Twojej firmy – idealny na spotkania z partnerami biznesowymi.</p>
+                            </div>
+                        </div>
+                    </section>
 
-      {/* CONTACT SECTION */}
-      <section className="py-20 px-6 md:px-20 bg-neutral-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-light mb-6">Skontaktuj się z nami</h2>
-          <p className="text-neutral-300 mb-10">Zarezerwuj wyjątkowy wieczór. Przygotujemy ofertę dopasowaną do Ciebie.</p>
-          <form className="grid gap-6 max-w-xl mx-auto">
-            <input type="text" placeholder="Imię i nazwisko" className="p-3 rounded-lg text-black" />
-            <input type="email" placeholder="Adres e-mail" className="p-3 rounded-lg text-black" />
-            <textarea placeholder="Opisz swoją wizję kolacji" className="p-3 rounded-lg text-black h-32" />
-            <button className="bg-white text-black px-6 py-3 rounded-2xl hover:bg-neutral-200 transition">
-              Wyślij zapytanie
-            </button>
-          </form>
-        </div>
-      </section>
 
-      {/* FOOTER */}
-      <footer className="bg-black text-neutral-400 text-center py-8 text-sm">
-        ©️ 2025 Privé Dining — Fine dining w Twoim domu.
-      </footer>
-    </div>
-  );
-}
+                    {/* EXPERIENCE SECTION */}
+                    <section className="py-20 px-6 md:px-20 bg-white">
+                        <div className="max-w-5xl mx-auto text-center">
+                            <h2 className="text-3xl font-light mb-6">Atmosfera Privé</h2>
+                            <p className="text-lg text-neutral-600 mb-10">
+                                Domowy spokój. Restauracyjna perfekcja. Dyskretna obsługa i doświadczenie, które zostaje w pamięci.
+                            </p>
+                            <img
+                                src="https://images.unsplash.com/photo-1524230568007-1b2b9f1c8f8f"
+                                alt="Fine dining table"
+                                className="rounded-2xl shadow-lg mx-auto max-h-[500px] object-cover"
+                            />
+                        </div>
+                    </section>
+
+                    {/* CONTACT SECTION */}
+                    <section className="py-20 px-6 md:px-20 bg-neutral-900 text-white">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-3xl font-light mb-6">Skontaktuj się z nami</h2>
+                            <p className="text-neutral-300 mb-10">Zarezerwuj wyjątkowy wieczór. Przygotujemy ofertę dopasowaną do Ciebie.</p>
+                            <form className="grid gap-6 max-w-xl mx-auto">
+                                <input type="text" placeholder="Imię i nazwisko" className="p-3 rounded-lg text-black" />
+                                <input type="email" placeholder="Adres e-mail" className="p-3 rounded-lg text-black" />
+                                <textarea placeholder="Opisz swoją wizję kolacji" className="p-3 rounded-lg text-black h-32" />
+                                <button className="bg-white text-black px-6 py-3 rounded-2xl hover:bg-neutral-200 transition">
+                                    Wyślij zapytanie
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+
+                    {/* FOOTER */}
+                    <footer className="bg-black text-neutral-400 text-center py-8 text-sm">
+                        ©️ 2025 Privé Dining — Fine dining w Twoim domu.
+                    </footer>
+                </div>
+            );
+        }
+
+        // Renderowanie komponentu React do elementu o id "root"
+        ReactDOM.render(<PriveDiningPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
